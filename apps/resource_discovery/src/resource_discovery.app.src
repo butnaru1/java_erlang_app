@@ -1,0 +1,23 @@
+{application, resource_discovery,
+  [{description, "A simple resource discovery system"},
+    {vsn, "0.1.0"},
+    {registered, [
+      resource_discovery_sup,
+      resource_discovery_server
+    ]},
+    {mod, {resource_discovery_app, []}},
+    {applications,
+      [kernel,
+        stdlib
+      ]},
+    {env, []},
+    {modules, [
+      resource_discovery,
+      resource_discovery_app,
+      resource_discovery_sup,
+      resource_discovery_server
+    ]},
+
+    {licenses, ["Apache 2.0"]},
+    {links, []}
+  ]}.

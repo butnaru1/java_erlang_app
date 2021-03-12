@@ -1,0 +1,28 @@
+{application, simple_cache,
+ [{description, "Simple Cache application"},
+  {vsn, "0.3.0"},
+  {registered, [simple_cache_sup, simple_cache_element_sup, simple_cache_event]},
+  {mod, {simple_cache_app, []}},
+  {applications,
+   [kernel,
+    sasl,
+    stdlib,
+    mnesia,
+    resource_discovery
+   ]},
+  {env, []},
+  {modules, [
+   simple_cache,
+   simple_cache_app,
+   simple_cache_db,
+   simple_cache_element,
+   simple_cache_element_sup,
+   simple_cache_event,
+   simple_cache_event_logger,
+   simple_cache_store,
+   simple_cache_sup
+  ]},
+
+  {licenses, ["Apache 2.0"]},
+  {links, []}
+ ]}.
